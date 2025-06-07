@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokedex Completa</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Ingresa un Pokémon" aria-label="Buscar Pokémon" />
+        <button id="btn-search" aria-label="Buscar Pokémon">Buscar</button>
+    </div>
+
+    <div id="pokemon-info" aria-live="polite">
+        <h1 id="name"></h1>
+        <h2 id="type"></h2>
+        <img id="sprite" src="" alt="Imagen del Pokémon" />
+
+        <div class="stat">
+            <span>HP</span>
+            <div class="stat-bar"><div id="stat-hp"></div></div>
+        </div>
+        <div class="stat">
+            <span>Ataque</span>
+            <div class="stat-bar"><div id="stat-attack"></div></div>
+        </div>
+        <div class="stat">
+            <span>Defensa</span>
+            <div class="stat-bar"><div id="stat-defense"></div></div>
+        </div>
+        <div class="stat">
+            <span>Ataque Especial</span>
+            <div class="stat-bar"><div id="stat-special-attack"></div></div>
+        </div>
+        <div class="stat">
+            <span>Defensa Especial</span>
+            <div class="stat-bar"><div id="stat-special-defense"></div></div>
+        </div>
+        <div class="stat">
+            <span>Velocidad</span>
+            <div class="stat-bar"><div id="stat-speed"></div></div>
+        </div>
+
+        <!-- Stats extras -->
+        <div class="stat">
+            <span>Peso (kg)</span>
+            <div class="stat-bar"><div id="stat-weight"></div></div>
+        </div>
+        <div class="stat">
+            <span>Altura (m)</span>
+            <div class="stat-bar"><div id="stat-height"></div></div>
+        </div>
+        <div class="stat">
+            <span>Experiencia Base</span>
+            <div class="stat-bar"><div id="stat-exp"></div></div>
+        </div>
+        <div class="stat">
+            <span>ID Pokédex</span>
+            <div class="stat-bar"><div id="stat-id"></div></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

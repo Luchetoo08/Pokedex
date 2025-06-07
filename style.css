@@ -1,0 +1,152 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #50e3c2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+h1, h2 {
+    text-transform: capitalize;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#search-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+input#search {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+input#search::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+input#search:focus {
+    box-shadow: 0 0 8px #50e3c2;
+}
+
+button {
+    background: #50e3c2;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(80, 227, 194, 0.6);
+}
+
+button:hover {
+    background: #3bb99f;
+    box-shadow: 0 6px 24px rgba(59, 185, 159, 0.8);
+}
+
+#pokemon-info {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    margin-top: 20px;
+}
+
+#pokemon-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+img#sprite {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    background: #fff;
+}
+
+img#sprite:hover {
+    transform: scale(1.1);
+}
+
+.stat {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.stat span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-bar {
+    background: rgba(255, 255, 255, 0.3);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stat-bar div {
+    height: 100%;
+    background: #fff;
+    color: #333;
+    text-align: right;
+    padding: 0 10px;
+    font-weight: 700;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    #search-container {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
